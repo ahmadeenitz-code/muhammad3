@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A personal portfolio page for Ahmadeen, web developer.">
+    <meta name="author" content="Jane Doe">
+    
+    <title>About Me - ibrahim muhammad garuwa Portfolio</title>
+    
+</head>
+<style>
+    root {
+  --primary-color: #000000;
+  --accent-color: #f4f4f4;
+  --text-main: #333333;
+  --font-heading: 'Playfair Display', serif;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* --- Navigation --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 5%;
+  position: absolute;
+  width: 90%;
+  z-index: 10;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+/* --- Hero (The "Impact" Section) --- */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+              url('your-hero-image.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+/* --- Stats (The "Comp Card" Style) --- */
+.stats-container {
+  padding: 80px 10%;
+  background: var(--accent-color);
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.stat-box span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: #888;
+}
+
+/* --- Gallery (The Masonry Look) --- */
+.portfolio-gallery {
+  line-height: 0;
+  column-count: 3;
+  column-gap: 10px;
+  padding: 10px;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  filter: grayscale(20%);
+  transition: 0.5s ease;
+}
+
+.photo img:hover {
+  filter: grayscale(0%);
+  transform: translateY(-5px);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .portfolio-gallery {
+    column-count: 1; /* Stack photos on mobile */
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+body{
+    background-color: #333333;
+    color: aqua;
+}
+</style>
+<body>
+
+    <header>
+        <h1>muhammad</h1>
+        <p> A software enginiering and Web Developer & Designer</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="C:\Users\musaf\Desktop\michael\photo1.jpeg" alt="A photo of muhammad" width="150">
+        
+        <p>Hello! I'm ibrahim muhammad garuwa, a passionate student learning the fundamentals of web development. I'm excited about building beautiful, functional, and accessible websites. This portfolio is one of my first projects using semantic HTML5 elements.</p>
+        <p>When I'm not coding, I enjoy photography and hiking.</p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        
+        <table border="1"> <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Skill</th>
+                    <th>Proficiency</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Frontend</td>
+                    <td>HTML5</td>
+                    <td>Intermediate</td>
+                </tr>
+                <tr>
+                    <td>Frontend</td>
+                    <td>CSS3</td>
+                    <td>Beginner</td>
+                </tr>
+                <tr>
+                    <td>Design</td>
+                    <td>Figma</td>
+                    <td>Beginner</td>
+                </tr>
+                <tr>
+                    <td>Languages</td>
+                    <td>JavaScript</td>
+                    <td>Beginner</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Have a question or want to work together? Send me a message!</p>
+        
+        <form action="/submit-contact-form" method="POST">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name" required>
+            </div>
+            <br> <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="user_email" required>
+            </div>
+            <br>
+            <div>
+                <label for="message">Message:</label><br> <textarea id="message" name="user_message" rows="5" cols="40" required></textarea>
+            </div>
+            <br>
+            <div>
+                <button type="submit">Send Message</button>
+            </div>
+        </form>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025 muhammad. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,104 @@
+/* --- Global Styles --- */
+:root {
+  --primary-color: #000000;
+  --accent-color: #f4f4f4;
+  --text-main: #333333;
+  --font-heading: 'Playfair Display', serif;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* --- Navigation --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 5%;
+  position: absolute;
+  width: 90%;
+  z-index: 10;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+/* --- Hero (The "Impact" Section) --- */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+              url('your-hero-image.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+/* --- Stats (The "Comp Card" Style) --- */
+.stats-container {
+  padding: 80px 10%;
+  background: var(--accent-color);
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.stat-box span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: #888;
+}
+
+/* --- Gallery (The Masonry Look) --- */
+.portfolio-gallery {
+  line-height: 0;
+  column-count: 3;
+  column-gap: 10px;
+  padding: 10px;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  filter: grayscale(20%);
+  transition: 0.5s ease;
+}
+
+.photo img:hover {
+  filter: grayscale(0%);
+  transform: translateY(-5px);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .portfolio-gallery {
+    column-count: 1; /* Stack photos on mobile */
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
